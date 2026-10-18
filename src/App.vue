@@ -29,8 +29,8 @@ body,
 }
 
 body {
-  color: #333;
-  background: #fff8f0;
+  color: #2d3748;
+  background: #f4f7ff;
   font-family:
     Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;

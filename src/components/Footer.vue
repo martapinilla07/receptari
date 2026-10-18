@@ -9,8 +9,8 @@
 <style scoped>
 .site-footer {
   width: 100%;
-  border-top: 1px solid rgb(255 255 255 / 22%);
-  background: #e67e22;
+  border-top: 1px solid rgb(255 255 255 / 18%);
+  background: #6c63ff;
   color: #fff;
 }
 

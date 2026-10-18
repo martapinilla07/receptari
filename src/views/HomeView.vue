@@ -23,8 +23,8 @@
   place-items: center;
   padding: 4rem 1.5rem;
   background:
-    radial-gradient(ellipse at top, rgb(244 162 97 / 17%), transparent 60%),
-    #fff8f0;
+    radial-gradient(ellipse at top, rgb(108 99 255 / 12%), transparent 60%),
+    #f4f7ff;
 }
 
 .hero {
@@ -34,7 +34,7 @@
 
 .eyebrow {
   margin: 0 0 1rem;
-  color: #a94f0b;
+  color: #ff6584;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -43,7 +43,7 @@
 
 .hero h1 {
   margin: 0;
-  color: #333;
+  color: #2d3748;
   font-size: clamp(2.5rem, 7vw, 4.5rem);
   letter-spacing: -0.045em;
   line-height: 1.08;
@@ -52,7 +52,7 @@
 .hero-subtitle {
   max-width: 620px;
   margin: 1.5rem auto 0;
-  color: #4c4038;
+  color: #4a5568;
   font-size: clamp(1.15rem, 2.5vw, 1.45rem);
   line-height: 1.6;
 }
@@ -60,7 +60,7 @@
 .hero-description {
   max-width: 570px;
   margin: 1rem auto 0;
-  color: #71645b;
+  color: #4a5568;
   font-size: 1.05rem;
   line-height: 1.8;
 }

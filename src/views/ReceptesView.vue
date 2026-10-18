@@ -41,7 +41,7 @@ onMounted(async () => {
       No hi ha receptes disponibles.
     </p>
 
-    <section v-else class="recipe-grid" aria-label="Llista de receptes">
+    <section v-else class="recipe-list" aria-label="Llista de receptes">
       <ReceptaCard
         v-for="recepta in receptes"
         :key="recepta.id"
@@ -56,30 +56,30 @@ onMounted(async () => {
 .recipes-page {
   min-height: 68vh;
   padding: 3.5rem 1.5rem 4rem;
-  background: #fff8f0;
+  background: #f4f7ff;
 }
 
 .page-title {
   margin: 0 auto 2.5rem;
-  color: #333;
+  color: #2d3748;
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: -0.035em;
   line-height: 1.15;
   text-align: center;
 }
 
-.recipe-grid {
-  display: grid;
-  width: min(100%, 1100px);
+.recipe-list {
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
-  justify-items: center;
 }
 
 .recipes-message {
   margin: 3rem auto;
-  color: #71645b;
+  color: #4a5568;
   font-size: 1.05rem;
   line-height: 1.7;
   text-align: center;
@@ -98,9 +98,8 @@ onMounted(async () => {
     margin-bottom: 2rem;
   }
 
-  .recipe-grid {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 1.25rem;
+  .recipe-list {
+    gap: 1rem;
   }
 }
 </style>

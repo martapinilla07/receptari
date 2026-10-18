@@ -29,7 +29,7 @@
 .about-page {
   min-height: 68vh;
   padding: 4rem 1.5rem;
-  background: #fff8f0;
+  background: #f4f7ff;
 }
 
 .about-content {
@@ -38,12 +38,12 @@
   padding: clamp(1.5rem, 5vw, 3rem);
   border-radius: 18px;
   background: #fff;
-  box-shadow: 0 8px 28px rgb(74 42 17 / 8%);
+  box-shadow: 0 8px 28px rgb(45 55 72 / 8%);
 }
 
 .eyebrow {
   margin: 0 0 0.75rem;
-  color: #a94f0b;
+  color: #6c63ff;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -52,7 +52,7 @@
 
 .about-content h1 {
   margin: 0 0 1.5rem;
-  color: #333;
+  color: #2d3748;
   font-size: clamp(2rem, 5vw, 3rem);
   letter-spacing: -0.035em;
   line-height: 1.15;
@@ -60,7 +60,7 @@
 
 .about-content p:not(.eyebrow) {
   margin: 0 0 1rem;
-  color: #51463f;
+  color: #4a5568;
   font-size: 1.05rem;
   line-height: 1.85;
 }
@@ -70,6 +70,6 @@
 }
 
 .about-content strong {
-  color: #a94f0b;
+  color: #ff6584;
 }
 </style>

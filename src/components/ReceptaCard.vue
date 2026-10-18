@@ -6,121 +6,85 @@ defineProps({
 </script>
 
 <template>
-  <article class="recipe-card" tabindex="0">
-    <div class="recipe-card-inner">
-      <div class="recipe-card-face recipe-card-front">
-        <h2 class="recipe-title">{{ nom }}</h2>
-        <span class="recipe-icon" aria-hidden="true">🍲</span>
-        <p class="recipe-hint">Passa-hi per veure els detalls</p>
-      </div>
-      <div class="recipe-card-face recipe-card-back">
-        <h2 class="recipe-title">{{ nom }}</h2>
-        <p class="recipe-description">{{ descripcio }}</p>
-      </div>
+  <article class="recipe-card">
+    <span class="recipe-icon" aria-hidden="true">🍲</span>
+    <div class="recipe-content">
+      <h2 class="recipe-title">{{ nom }}</h2>
+      <p class="recipe-description">{{ descripcio }}</p>
     </div>
   </article>
 </template>
 
 <style scoped>
 .recipe-card {
-  width: 100%;
-  max-width: 360px;
-  height: 200px;
-  border-radius: 16px;
-  perspective: 1000px;
-}
-
-.recipe-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  transform-style: preserve-3d;
-  transition: transform 700ms cubic-bezier(0.2, 0.7, 0.25, 1);
-}
-
-.recipe-card:hover .recipe-card-inner,
-.recipe-card:focus .recipe-card-inner {
-  transform: rotateY(180deg);
-}
-
-.recipe-card-face {
-  position: absolute;
-  inset: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  flex-direction: column;
-  padding: 1.5rem;
-  border: 1px solid rgb(230 126 34 / 10%);
-  border-radius: inherit;
+  width: 100%;
+  max-width: 1100px;
+  align-items: flex-start;
+  gap: clamp(1.25rem, 4vw, 2.5rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  border: 1px solid rgb(108 99 255 / 12%);
+  border-left: 5px solid #00c896;
+  border-radius: 20px;
   background: #fff;
-  box-shadow: 0 8px 24px rgb(74 42 17 / 10%);
-  text-align: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.recipe-card-front {
-  background: linear-gradient(145deg, #fff 55%, #fff2e5);
-}
-
-.recipe-card-front .recipe-title {
-  font-size: 1.3rem;
+  box-shadow: 0 12px 32px rgb(45 55 72 / 8%);
 }
 
 .recipe-icon {
-  margin: 0.25rem 0;
-  font-size: 3.75rem;
-  line-height: 1.15;
+  display: grid;
+  width: clamp(3.75rem, 9vw, 5rem);
+  height: clamp(3.75rem, 9vw, 5rem);
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 18px;
+  background: #e6faf5;
+  font-size: clamp(2.25rem, 5vw, 3rem);
+  line-height: 1;
 }
 
-.recipe-hint {
-  margin: 0.25rem 0 0;
-  color: #a94f0b;
-  font-size: 0.85rem;
-  font-weight: 600;
+.recipe-content {
+  min-width: 0;
+  flex: 1;
 }
 
 .recipe-title {
-  margin: 0;
-  color: #333;
-  font-size: 1.45rem;
-  line-height: 1.35;
-  overflow-wrap: anywhere;
-}
-
-.recipe-card-back {
-  transform: rotateY(180deg);
-}
-
-.recipe-card-back .recipe-title {
-  margin-bottom: 0.75rem;
-  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+  color: #2d3748;
+  font-size: clamp(1.25rem, 2.5vw, 1.65rem);
+  line-height: 1.3;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 .recipe-description {
-  flex: 0 1 auto;
-  display: -webkit-box;
+  width: 100%;
+  max-width: 100%;
   margin: 0;
-  overflow: hidden;
-  color: #5e5148;
-  font-size: 1rem;
-  line-height: 1.7;
-  overflow-wrap: anywhere;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  white-space: pre-line;
 }
 
-.recipe-card:focus-visible {
-  outline: 3px solid #e67e22;
-  outline-offset: 4px;
-}
+@media (max-width: 480px) {
+  .recipe-card {
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem;
+  }
 
-@media (prefers-reduced-motion: reduce) {
-  .recipe-card-inner {
-    transition-duration: 1ms;
+  .recipe-icon {
+    width: 3.25rem;
+    height: 3.25rem;
+    border-radius: 14px;
+    font-size: 2rem;
+  }
+
+  .recipe-description {
+    font-size: 1rem;
   }
 }
 </style>

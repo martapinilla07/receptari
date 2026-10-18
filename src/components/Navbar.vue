@@ -18,8 +18,8 @@ import { RouterLink } from 'vue-router'
   top: 0;
   z-index: 10;
   width: 100%;
-  background: #e67e22;
-  box-shadow: 0 3px 12px rgb(74 42 17 / 16%);
+  background: #6c63ff;
+  box-shadow: 0 3px 14px rgb(45 55 72 / 14%);
 }
 
 .navbar-content {
@@ -52,7 +52,7 @@ import { RouterLink } from 'vue-router'
 
 .nav-link.router-link-active {
   background: #fff;
-  color: #a94f0b;
+  color: #554bd9;
 }
 
 .nav-link:focus-visible {
